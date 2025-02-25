@@ -1,8 +1,8 @@
 package com.wipro.java.microservices.o;
 
-public abstract class DatabasePersistence implements BookPersistence {
+public class DatabasePersistence implements BookPersistence {
     @Override
-    public void save(Book book) {  
-        System.out.println("Saving book to Database: " + book.getTitle());  
-        }
+    public void save(Books book) {
+        System.out.println("Saving book to Database: " + book.getName());
+    }
 }

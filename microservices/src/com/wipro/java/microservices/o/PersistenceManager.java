@@ -7,7 +7,7 @@ public class PersistenceManager {
         this.persistence = persistence;
     }
 
-    public void saveBook(Book book) { // Ensure `Book` is correct
+    public void saveBook(Books book) {
         persistence.save(book);
     }
 }

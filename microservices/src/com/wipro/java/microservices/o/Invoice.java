@@ -1,19 +1,19 @@
 package com.wipro.java.microservices.o;
 
 public class Invoice {
-    private Book book;
+    private Books book;
     private int quantity;
+    private int totalCost;
 
-    public Invoice(Book book, int quantity) {
+    public Invoice(Books book, int quantity) {
         this.book = book;
         this.quantity = quantity;
+        this.totalCost = book.getPrice() * quantity;
     }
 
     public void printInvoice() {
-        int totalCost = book.getPrice() * quantity; 
-
-        System.out.println("Book: " + book.getTitle());  // Corrected to getTitle()
-        System.out.println("Year: " + book.getYear());   // Ensure getYear() exists in Book
+        System.out.println("Book: " + book.getName());
+        System.out.println("Year: " + book.getYear());
         System.out.println("Price per book: " + book.getPrice());
         System.out.println("Quantity: " + quantity);
         System.out.println("Total Cost: " + totalCost);
